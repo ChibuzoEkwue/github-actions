@@ -9,4 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Deploying..."
+    - name: Get Environment
+      run: echo ${{ github.event.client_payload.environment }}
+    - name: Deploy Application
+      run: echo "Deploying..."
